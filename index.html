@@ -3,16 +3,17 @@
 <head>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
     <title>Eval</title>
-    <script type="application/javascript" src="wiiCore.js"></script>
 </head>
 <body>
 <textarea id="evalInput" rows="4" style="width: 100%" onmousedown="keyboard.call( 1, 10, false, 'eval input');"></textarea>
 <textarea id="evalOutput" rows="18" style="width: 100%" readonly>eval output</textarea>
-<button onmousedown="document.getElementById('evalOutput').value = eval(document.getElementById('evalInput').value)">execute</button>
+<p><button onmousedown="document.getElementById('evalOutput').value = eval(document.getElementById('evalInput').value);">execute</button> rev5</p>
 <p id="shopConnect">
-    <script type="application/javascript">
-        initialiseShop();
-    </script>
+    stuff goes here.
 </p>
+<script type="application/javascript" src="wiiCore.js"></script>
+<script type="application/javascript">
+    initialiseShop();
+</script>
 </body>
 </html>

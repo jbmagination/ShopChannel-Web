@@ -5,7 +5,7 @@ const useSyncRegistration       = null;
 
 
 // Keyboard object.
-let keyboard = new wiiKeyboard();
+const keyboard = new wiiKeyboard();
 
 /*
 keyboard.call(type, limitrow, secret) - call a keyboard!
@@ -60,5 +60,8 @@ const shop = new wiiShop();
 
 // initialiseShop: Mitigates the timeout error.
 function initialiseShop() {
-    document.getElementById('shopConnect').innerHTML = shop.connecting;
+    document.getElementById("shopConnect").innerHTML = "init called.";
+    document.getElementById("shopConnect").innerHTML = shop.connecting;
+    shop.disableHRP();
+    shop.enableHRP();
 }
