@@ -1,0 +1,18 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <title>Eval</title>
+    <script type="application/javascript" src="wiiCore.js"></script>
+</head>
+<body>
+<textarea id="evalInput" rows="4" style="width: 100%" onmousedown="keyboard.call( 1, 10, false, 'eval input');"></textarea>
+<textarea id="evalOutput" rows="18" style="width: 100%" readonly>eval output</textarea>
+<button onmousedown="document.getElementById('evalOutput').value = eval(document.getElementById('evalInput').value)">execute</button>
+<p id="shopConnect">
+    <script type="application/javascript">
+        initialiseShop();
+    </script>
+</p>
+</body>
+</html>
