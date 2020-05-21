@@ -2,6 +2,14 @@
 
 const ecTimeout                 = null;
 const useSyncRegistration       = null;
+const ecsUrl = "https://ecs.s.oscwii.org";
+const iasUrl = "https://ecs.s.oscwii.org";
+const ccsUrl = "https://ecs.s.oscwii.org";
+const ucsUrl = "https://ecs.s.oscwii.org";
+const casUrl = "https://ecs.s.oscwii.org";
+
+var progress;
+
 
 
 // Keyboard object.
@@ -60,15 +68,20 @@ const shop = new wiiShop();
 // ECommerceInterface object.
 const ec = new ECommerceInterface();
 
+// Mitigates timeouts.
+const connected = shop.connecting;
+
 // initialiseShop: Mitigates the timeout error.
 function initialiseShop() {
-    document.getElementById("shopConnect").innerHTML = "init called.";
-    document.getElementById("shopConnect").innerHTML = shop.connecting;
-    shop.disableHRP();
-    shop.enableHRP();
+    ec.setWebSvcUrls(ecsUrl, iasUrl, casUrl);
 }
 
 // getECLog: Returns the ECommerce Library log. (Good for Eval page.)
 function getECLog() {
     return ec.getLog();
+}
+
+// dl(titleId): Downloads a title from WSC. TitleId must be a string.
+function dl(titleId) {
+    progress = ec.downloadTitle(titleId);
 }
