@@ -68,7 +68,7 @@ function initialiseShop() {
     shop.enableHRP();
 }
 
-// getECLog: runs every shop function.
+// getECLog: Returns the ECommerce Library log. (Good for Eval page.)
 function getECLog() {
     return ec.getLog();
 }
