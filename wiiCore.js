@@ -6,7 +6,6 @@ const useSyncRegistration       = null;
 
 // Keyboard object.
 const keyboard = new wiiKeyboard();
-
 /*
 keyboard.call(type, limitrow, secret) - call a keyboard!
 	limitrow - amount of rows allowed?
@@ -58,10 +57,18 @@ const shop = new wiiShop();
   Not putting shop.connecting in to an element will result in the shop eventually timing out and throwing an error code.
 */
 
+// ECommerceInterface object.
+const ec = new ECommerceInterface();
+
 // initialiseShop: Mitigates the timeout error.
 function initialiseShop() {
     document.getElementById("shopConnect").innerHTML = "init called.";
     document.getElementById("shopConnect").innerHTML = shop.connecting;
     shop.disableHRP();
     shop.enableHRP();
+}
+
+// getECLog: runs every shop function.
+function getECLog() {
+    return ec.getLog();
 }

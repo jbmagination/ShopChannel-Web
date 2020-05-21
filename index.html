@@ -5,12 +5,15 @@
     <title>Eval</title>
     <script type="application/javascript" src="wiiCore.js"></script>
 </head>
-<body onload="initialiseShop()">
-<textarea id="evalInput" rows="4" style="width: 100%" onmousedown="keyboard.call( 1, 10, false, 'eval input');"></textarea>
-<textarea id="evalOutput" rows="18" style="width: 100%" readonly>eval output</textarea>
-<p><button onmousedown="document.getElementById('evalOutput').value = eval(document.getElementById('evalInput').value);">execute</button> rev5</p>
-<p id="shopConnect">
-    stuff goes here.
-</p>
+    <body onload="initialiseShop()">
+    <textarea id="evalInput" rows="4" style="width: 100%" onmousedown="keyboard.call( 1, 10, false, 'eval input');"></textarea>
+    <textarea id="evalOutput" rows="18" style="width: 100%" readonly>eval output</textarea>
+    <p>
+        <button onmousedown="document.getElementById('evalOutput').value = eval(document.getElementById('evalInput').value);">execute</button>
+        rev6 <!-- Makes sure that we know that the WSC is actually loading the right version. -->
+    </p>
+    <p id="shopConnect">
+        stuff goes here.
+    </p>
 </body>
 </html>
