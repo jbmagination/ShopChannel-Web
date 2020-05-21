@@ -74,6 +74,7 @@ const connected = shop.connecting;
 // initialiseShop: Mitigates the timeout error.
 function initialiseShop() {
     ec.setWebSvcUrls(ecsUrl, iasUrl, casUrl);
+    ec.setContentUrls(ccsUrl, ucsUrl);
 }
 
 // getECLog: Returns the ECommerce Library log. (Good for Eval page.)
