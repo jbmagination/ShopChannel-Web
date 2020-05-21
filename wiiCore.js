@@ -61,8 +61,6 @@ const shop = new wiiShop();
     0 - Internet
     1 - Server
     2 - Online
-
-  Not putting shop.connecting in to an element will result in the shop eventually timing out and throwing an error code.
 */
 
 // ECommerceInterface object.
@@ -79,10 +77,11 @@ function initialiseShop() {
 
 // getECLog: Returns the ECommerce Library log. (Good for Eval page.)
 function getECLog() {
-    return ec.getLog();
+    document.getElementById('evalOutput').value = ec.getLog();
 }
 
 // dl(titleId): Downloads a title from WSC. TitleId must be a string.
 function dl(titleId) {
     progress = ec.downloadTitle(titleId);
+    document.getElementById('evalOutput').value = progress;
 }
