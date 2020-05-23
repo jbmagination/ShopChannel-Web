@@ -51,7 +51,7 @@ function dl(titleId) {
 // devDiagnostics(): Literally prints device info, nothing else.
 function devDiagnostics() {
     document.getElementById('evalOutput').value = 'Getting device information...';
-    document.getElementById('evalOutput').value = r;
+    document.getElementById('evalOutput').innerText = r;
 }
 
 /*
