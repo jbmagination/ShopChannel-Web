@@ -45,7 +45,7 @@ function getECLog() {
 // dl(titleId): Downloads a title from WSC. TitleId must be a string.
 function dl(titleId) {
     progress = ec.downloadTitle(titleId);
-    document.getElementById('evalOutput').value = progress;
+    document.getElementById('evalOutput').value = 'Progress: ' + progress;
 }
 
 // devDiagnostics(): Literally prints device info, nothing else.
