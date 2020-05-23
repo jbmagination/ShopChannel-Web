@@ -6,14 +6,15 @@
     <script type="application/javascript" src="wiiCore.js"></script>
 </head>
     <body onload="initialiseShop(); const testMode = 'true';">
-    <textarea id="evalInput" rows="5" style="width: 100%" onmousedown="keyboard.call( 1, 10, false, 'eval input');"></textarea>
-    <textarea id="evalOutput" rows="16" style="width: 100%" readonly>eval output</textarea>
+    <textarea id="evalInput" rows="5" style="width: 100%" onmousedown="keyboard.call( 1, 10, false, 'Javascript Input (Eval)');"></textarea>
+    <textarea id="evalOutput" rows="16" style="width: 100%" readonly>
+        Eval Output
+    </textarea>
     <p>
         <button onmouseover="sound.playSE(2);" onmousedown="document.getElementById('evalOutput').value = eval(document.getElementById('evalInput').value); sound.playSE(3);" style="color: #008000;">eval</button>
         <button onmouseover="sound.playSE(2);" onmousedown="dl('test'); sound.playSE(3);">dl test</button>
         <button onmouseover="sound.playSE(2);" onmousedown="getECLog(); sound.playSE(3);">getECLog</button>
         <button onmouseover="sound.playSE(2);" onmousedown="devDiagnostics(); sound.playSE(3);">getDeviceInfo</button>
-        <button onmouseover="sound.playSE(2);" onmousedown="window.location.replace('./iframe.html');">Go to Shop</button>
         rev10 <!-- Makes sure that we know that the WSC is actually loading the right version. -->
     </p>
 </body>
