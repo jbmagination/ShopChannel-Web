@@ -27,6 +27,7 @@ const shop = new wiiShop();
 const ec = new ECommerceInterface();
 const sound = new wiiSound()
 const connected = shop.connecting;
+const r = ec.getDeviceInfo();
 
 
 // initialiseShop(): Prepares the services for use.
@@ -45,6 +46,12 @@ function getECLog() {
 function dl(titleId) {
     progress = ec.downloadTitle(titleId);
     document.getElementById('evalOutput').value = progress;
+}
+
+// devDiagnostics(): Literally prints device info, nothing else.
+function devDiagnostics() {
+    document.getElementById('evalOutput').value = 'Getting device information...';
+    document.getElementById('evalOutput').value = r;
 }
 
 /*

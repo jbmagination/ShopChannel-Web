@@ -9,10 +9,11 @@
     <textarea id="evalInput" rows="5" style="width: 100%" onmousedown="keyboard.call( 1, 10, false, 'eval input');"></textarea>
     <textarea id="evalOutput" rows="16" style="width: 100%" readonly>eval output</textarea>
     <p>
-        <button onmousedown="document.getElementById('evalOutput').value = eval(document.getElementById('evalInput').value); sound.playSE(12);" style="color: #008000;">eval</button>
-        <button onmousedown="dl('test'); sound.playSE(8);">dl test</button>
-        <button onmousedown="getECLog(); sound.playSE(8);">getECLog</button>
-        <button onmousedown="window.location.replace('./iframe.html');">Go to Shop</button>
+        <button onmouseover="sound.playSE(2);" onmousedown="document.getElementById('evalOutput').value = eval(document.getElementById('evalInput').value); sound.playSE(3);" style="color: #008000;">eval</button>
+        <button onmouseover="sound.playSE(2);" onmousedown="dl('test'); sound.playSE(3);">dl test</button>
+        <button onmouseover="sound.playSE(2);" onmousedown="getECLog(); sound.playSE(3);">getECLog</button>
+        <button onmouseover="sound.playSE(2);" onmousedown="devDiagnostics(); sound.playSE(3);">getDeviceInfo</button>
+        <button onmouseover="sound.playSE(2);" onmousedown="window.location.replace('./iframe.html');">Go to Shop</button>
         rev10 <!-- Makes sure that we know that the WSC is actually loading the right version. -->
     </p>
 </body>
