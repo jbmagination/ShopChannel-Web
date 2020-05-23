@@ -8,7 +8,8 @@
 
 */
 
-// Nullify some unimportant variables.
+// Checks.
+const ecCheck                   = false;
 const ecTimeout                 = null;
 const useSyncRegistration       = null;
 
