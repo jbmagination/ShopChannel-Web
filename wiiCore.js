@@ -50,15 +50,15 @@ function dl(titleId) {
 
 // devDiagnostics(): Literally prints device info, nothing else.
 function devDiagnostics() {
-    document.getElementById('evalOutput').innerHTML =
-        'Device Information Tool for OSC <br>' +
-        'Important: This information is used for authentication. <br>' +
-        'Do not share the tokens with anyone, not even your grandma! <br>' +
-        'Account ID: ' + r.accountId + '<br>' +
-        'Device ID: ' + r.deviceId + '<br>' +
-        'Country: ' + r.region + '<br>' +
-        'Serial: ' + r.serial + '<br>' +
-        '<br>' +
+    document.getElementById('evalOutput').value =
+        'Device Information Tool for OSC \n' +
+        'Important: This information is used for authentication. \n' +
+        'Do not share the tokens with anyone, not even your grandma! \n' +
+        'Account ID: ' + r.accountId + '\n' +
+        'Device ID: ' + r.deviceId + '\n' +
+        'Country: ' + r.region + '\n' +
+        'Serial: ' + r.serial + '\n' +
+        '\n' +
         '- End of Information -'
 }
 
