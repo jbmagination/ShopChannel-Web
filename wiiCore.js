@@ -50,8 +50,16 @@ function dl(titleId) {
 
 // devDiagnostics(): Literally prints device info, nothing else.
 function devDiagnostics() {
-    document.getElementById('evalOutput').value = 'Getting device information...';
-    document.getElementById('evalOutput').innerText = r;
+    document.getElementById('evalOutput').innerHTML =
+        'Device Information Tool for OSC <br>' +
+        'Important: This information is used for authentication. <br>' +
+        'Do not share the tokens with anyone, not even your grandma! <br>' +
+        'Account ID: ' + r.accountId + '<br>' +
+        'Device ID: ' + r.deviceId + '<br>' +
+        'Country: ' + r.region + '<br>' +
+        'Serial: ' + r.serial + '<br>' +
+        '<br>' +
+        '- End of Information -'
 }
 
 /*
